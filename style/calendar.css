@@ -1,0 +1,150 @@
+/********************************************************
+**
+** Theme name: Cubic
+** Description: A new base theme for Moodle.
+** Creation Date: 05/07/2012
+** Author: Bruno Sampaio
+** Author URI: http://pessoa.fct.unl.pt/b.sampaio
+**
+** Customize, edit, poke, prod, and adapt to your needs.
+**
+*********************************************************/
+
+/* Calendar
+-----------------------*/
+#page-calendar-view .eventlist {
+    padding-top: 1em;
+}
+
+#page-calendar-view .eventlist .event {
+    border: none;
+}
+
+#page-calendar-view .eventlist .event .topic {
+    border-width: 1px 1px 0;
+    border-color: #ddd;
+    border-style: solid;
+    background: #f5f5f5;
+}
+
+#page-calendar-view .eventlist .event .topic .name {
+    font-weight: bold;
+}
+
+#page-calendar-view .eventlist .event .description {
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: #ddd;
+}
+
+.calendarlayout .sidecalendar {
+    padding-left: 15px;
+}
+
+.calendartable {width: 100%;}
+.calendartable th,
+.calendartable td {width:14%;vertical-align:top;text-align: center;border-width:1px;}
+
+.calendartable .duration ul {
+    border-width: 2px 0;
+    border-style: solid;
+}
+
+.calendartable .duration_user ul {
+    border-color: #dce7ec;
+}
+
+.calendartable .duration_global ul {
+    border-color: #d6f8cd;
+}
+
+.calendartable .duration_group ul {
+    border-color: #fee7ae;
+}
+
+.calendartable .duration_course ul {
+    border-color: #ffd3bd;
+}
+
+.calendartable .duration .events-underway {
+    color: #666;
+}
+
+.calendar_event_user,
+.duration_user {
+    background-color: #dce7ec;
+}
+
+.calendar_event_course,
+.duration_course {
+    background-color: #ffd3bd;
+}
+
+.calendar_event_global,
+.duration_global {
+    background-color: #d6f8cd;
+}
+
+.calendar_event_group,
+.duration_group {
+    background-color: #fee7ae;
+}
+
+.path-calendar .calendar-controls .previous,
+.path-calendar .calendar-controls .next,
+.path-calendar .calendar-controls .current {display: block;float: left;width: 12%;}
+.path-calendar .calendar-controls .previous {text-align: left;}
+.path-calendar .calendar-controls .current {text-align: center;width: 76%;}
+.path-calendar .calendar-controls .next {text-align: right;}
+
+.maincalendar .calendarmonth td,
+.maincalendar .calendarmonth th {
+    border: 1px solid #ddd;
+}
+
+.path-calendar .maincalendar {vertical-align: top;padding:0;}
+.path-calendar .maincalendar .bottom {text-align: center;padding:5px 0 0 0;}
+.path-calendar .maincalendar .heightcontainer {height: 100%;position: relative;}
+.path-calendar .maincalendar .calendarmonth {width:98%;margin:10px auto;}
+.path-calendar .maincalendar .calendarmonth ul {margin:0;}
+.path-calendar .maincalendar .calendarmonth ul li {list-style-type:none;margin-top: 4px;}
+.path-calendar .maincalendar .calendarmonth td {height: 5em;}
+
+.maincalendar .calendar-controls .previous,
+.maincalendar .calendar-controls .current,
+.maincalendar .calendar-controls .next {
+    float: left;
+}
+.path-calendar .maincalendar .calendar-controls .previous,
+.path-calendar .maincalendar .calendar-controls .next{
+	width: 30%;
+}
+
+.path-calendar .maincalendar .calendar-controls .current {
+	width: 39.95%;
+	margin: 0 auto;
+    font-size: 1.35em;
+    text-align: center;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.maincalendar .calendar-controls .next {
+    text-align: right;
+}
+
+.path-calendar .maincalendar .controls {width:98%;padding: 10px 5px 0;margin:10px auto;}
+.path-calendar .maincalendar .eventlist .event {width:100%;margin-bottom:10px;border-spacing:0px;border-collapse:separate;border-width:1px;border-style:solid;}
+.path-calendar .maincalendar .eventlist .event .topic .name {float:left;}
+.path-calendar .maincalendar .eventlist .event .topic .date {float:right;}
+.path-calendar .maincalendar .eventlist .event .course {float:left;clear:left;}
+.path-calendar .maincalendar .eventlist .event .side {width:32px;}
+.path-calendar .maincalendar .header {overflow:hidden;}
+.path-calendar .maincalendar .header .buttons {float: right; margin:0;}
+.path-calendar .filters table {border-collapse:separate;border-spacing: 2px;width: 100%;}
+.maincalendar .filters table td {font-size: 0.9em;}
+#page-calendar-export .indent {padding-left: 20px;}
+
+.maincalendar .bottom {
+    margin-top: 25px;
+}

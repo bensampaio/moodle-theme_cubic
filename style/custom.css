@@ -1,0 +1,174 @@
+/********************************************************
+**
+** Theme name: Cubic
+** Description: A new base theme for Moodle.
+** Creation Date: 05/07/2012
+** Author: Bruno Sampaio
+** Author URI: http://pessoa.fct.unl.pt/b.sampaio
+**
+** Customize, edit, poke, prod, and adapt to your needs.
+**
+*********************************************************/
+
+/* Custom Menu
+-----------------------*/
+#custommenuwrap {
+    background-color: #F7F6F1;
+    border-bottom: 1px solid [[setting:borders_color]];
+    padding: 3px 0px;
+}    
+
+#custommenu {
+    border-width: 0;
+    margin: 0 25px;
+	clear:both;
+}
+
+#custommenu .yui3-menu .yui3-menu {
+	z-index:500;
+}
+
+#custommenu .yui3-menu-label,
+#custommenu .yui3-menuitem-content {
+    color: #35251B;
+    font-weight: 400;
+    border-width: 0;
+	cursor:pointer;
+}
+
+#custommenu .yui3-menu-label,
+#custommenu .yui3-menu .yui3-menu .yui3-menu-label {
+	background-image: url([[pix:theme|vertical-menu-submenu-indicator]]);
+}
+
+#custommenu .yui3-menu .yui3-menu .yui3-menu-label-menuvisible {
+	background-image:url([[pix:theme|horizontal-menu-submenu-indicator]]);
+}
+
+#custommenu .custom_menu_submenu .yui3-menu-label,
+#custommenu .custom_menu_submenu .yui3-menuitem-content {
+    color: #35251B;
+}
+
+#custommenu .yui3-menuitem-active {
+	background-color:#B3D4FF;
+}
+
+#custommenu .yui3-menu-label.yui3-menu-label-active,
+#custommenu .yui3-menuitem-active .yui3-menuitem-content {
+    color: #DA5013;
+}
+
+#custommenu .yui3-menuitem-active,
+#custommenu .yui3-menuitem-active .yui3-menuitem-content,
+#custommenu .yui3-menu-horizontal .yui3-menu-label,
+#custommenu .yui3-menu-horizontal .yui3-menu-content {
+	background-image:none;
+	background-position:right center;
+	background-repeat:no-repeat;
+}
+
+#custommenu .yui3-menu-content,
+#custommenu .yui3-menu .yui3-menu .yui3-menu-content,
+#custommenu .yui3-menu-horizontal .yui3-menu-label,
+#custommenu .yui3-menu-horizontal .yui3-menuitem-content  {
+    border-width: 0;
+}
+
+#custommenu .yui3-menu-label-active,
+#custommenu .yui3-menu-label-menuvisible,
+#custommenu .yui3-menu .yui3-menu .yui3-menuitem-active .yui3-menuitem-content {
+    background-color:#F6F6F6;
+}
+
+#custommenu .custom_menu_submenu {
+    border: 2px solid #DA5013 !important;
+    background: #fff;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+	box-shadow: 0px 1px 3px #ccc;
+	-o-box-shadow: 0px 1px 3px #ccc;
+	-moz-box-shadow: 0px 1px 3px #ccc;
+    -webkit-box-shadow: 0px 1px 3px #ccc;
+}
+
+#custommenu .yui3-menu.javascript-disabled .yui3-menu-content,
+#custommenu .yui3-menu.javascript-disabled .yui3-menu-content .ul {
+    border-width:0;
+}
+
+#custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content,
+#custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content .ul {
+	border: 1px solid #000;
+}
+
+#custommenu .yui3-menu-horizontal.javascript-disabled ul {
+	margin:0;
+	padding:0;
+}
+
+#custommenu .yui3-menu-horizontal.javascript-disabled li {
+	width:auto;
+	margin:0;
+	padding:0;
+	list-style:none;
+	position:relative;
+}
+
+#custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu .yui3-menu-label {
+	padding-right:20px;
+}
+
+#custommenu .yui3-menu-horizontal.javascript-disabled>.yui3-menu-content>ul>li {
+	float:left;
+}
+
+#custommenu .yui3-menu-horizontal.javascript-disabled li a {
+	padding:0 10px;
+}
+
+#custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu {
+	position:absolute;
+	top:-10000px;
+	left:-10000px;
+	visibility:hidden;
+	white-space: nowrap;
+	max-width: 250px;
+	background-color:#FFF;
+}
+
+#custommenu .yui3-menu-horizontal.javascript-disabled li:hover>.yui3-menu {
+	top:100%;
+	left:0;
+	visibility: visible;
+	z-index:10;
+}
+
+#custommenu .yui3-menu-horizontal.javascript-disabled li:hover .yui3-menu .yui3-menu {
+	top:0;
+	left:100%;
+	min-width:200px;
+}
+
+#custommenu .yui3-menu-horizontal.javascript-disabled>.yui3-menu-content>ul:after {
+	content:"";
+	display:block;
+	clear:both;
+	line-height:0;
+	font-size:0;
+	visibility:hidden;
+}
+
+#custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content {
+	font-size:93%;
+	line-height:2;
+	padding:0;
+}
+
+#custommenu .yui3-menu-horizontal.javascript-disabled .yui3-menu-content .yui3-menu-content {
+	font-size:100%;
+}
+
+/** Custom CSS **/
+[[setting:custom_css]]

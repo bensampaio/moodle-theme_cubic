@@ -1,0 +1,611 @@
+/********************************************************
+**
+** Theme name: Cubic
+** Description: A new base theme for Moodle.
+** Creation Date: 05/07/2012
+** Author: Bruno Sampaio
+** Author URI: http://pessoa.fct.unl.pt/b.sampaio
+**
+** Customize, edit, poke, prod, and adapt to your needs.
+**
+*********************************************************/
+
+/* User bar
+-----------------------*/
+#user-bar {
+	font-size: 13px;
+	font-weight: bold;
+	width: 100%;
+	height: 38px;
+	border-bottom: 1px solid [[setting:bar_border_color]];
+	box-shadow: 0 0 10px black;
+	-o-box-shadow: 0 0 10px black;
+	-moz-box-shadow: 0 0 10px black;
+	-webkit-box-shadow: 0 0 10px black;
+	color: [[setting:bar_text_color]];
+	background-color: [[setting:bar_color]];
+	position: relative;
+	z-index: 11000;
+}
+
+#user-bar #site-links {
+	float: left;
+	height: 38px;
+	margin-left: 10px;
+}
+
+#user-bar #user-links {
+	float: right;
+	height: 38px;
+	margin-right: 10px;
+}
+
+#user-bar ul {
+	height: 38px;
+	margin: 0;
+	padding: 0;
+}
+
+#user-bar li {
+	height: 20px;
+	margin-top: 4px;
+	padding: 8px 8px 7px;
+	line-height: 20px;
+	z-index: 11002;
+	vertical-align: middle;
+	list-style-type: none;
+	white-space: nowrap;
+	display:-moz-inline-stack;
+	display: inline-block;
+	zoom:1;
+	*display:inline;
+	position: relative;
+	cursor: pointer;
+}
+
+#user-bar #site-links li {
+	padding-right: 20px;
+}
+
+#user-bar #user-links li > img,
+#user-bar #user-links li > .icon {
+	height: 20px;
+}
+
+#user-bar #user-links #info > img {
+	width: 20px;
+}
+
+#user-bar #user-links li > img {
+	margin-bottom: 5px;
+	vertical-align: middle;
+}
+
+#user-bar #site-links li > .icon {
+	width: 9px;
+	height: 6px;
+	margin-top: -3px;
+	top: 50%;
+	right: 5px;
+	position: absolute;
+	vertical-align: middle;
+	background-image:url([[pix:theme|bar/arrow]]);
+	background-repeat:no-repeat;
+}
+
+#user-bar #user-links li > .icon {
+	width: 20px;
+	background-image:url([[pix:theme|bar/icons]]);
+	background-repeat:no-repeat;
+}
+
+#user-bar #user-links #languages > .flag,
+#user-bar #menus #languages_menu .flag {
+	width: 29px;
+	height: 20px;
+	background-image:url([[pix:theme|bar/flags]]);
+	background-repeat:no-repeat;
+}
+
+#user-bar li.selected {
+	background-color: white;
+	color: black;
+	padding: 7px;
+	border: 1px solid black;
+	border-bottom: 0px;
+}
+
+#user-bar #site-links li.selected {
+	padding-right: 19px;
+}
+
+#user-bar > div > ul > li:not(.selected):hover,
+#user-bar #logo:hover {
+	background-color: [[setting:bar_hover_color]];
+}
+
+#user-bar a {
+	line-height: 30px;
+	font-size: 14px;
+	clear: both;
+	display:-moz-inline-stack;
+	display: inline-block;
+	zoom:1;
+	*display:inline;
+}
+
+#user-bar #logo {
+	position: absolute;
+	height: 30px;
+	margin-top: 4px;
+	padding: 2px 6px;
+	left: 50%;
+	margin-left: -50px;
+}
+
+#user-bar #logo img {
+	height: 26px;
+}
+
+#user-bar #user-links .counter {
+	height: 11px;
+	line-height: 11px;
+	font-size: 11px;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	background-color: red;
+	color: white;
+	padding: 2px 3px 3px 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+
+/* Menus
+-----------------------*/
+#user-bar #menus .menu {
+	font-weight: normal;
+	width: 280px;
+	max-height: 400px;
+	border: 1px solid black;
+	top: 38px;
+	position: absolute;
+	display: none;
+	background-color: white;
+	color: black;
+	overflow: hidden;
+	z-index: 11001;
+	box-shadow: 0 0 10px rgba(0,0,0,0.6);
+	-o-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+#user-bar #menus .menu .title,
+#user-bar #menus .menu .division,
+#user-bar #menus .menu .empty,
+#user-bar #menus .menu .all {
+	width: 94%;
+	padding: 10px 3%;
+}
+
+#user-bar #menus .menu .title,
+#user-bar #menus .menu .division {
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+#user-bar #menus .menu .division {
+	background-color: #F2F2F2;
+}
+
+#user-bar #menus .menu .container {
+	width: 100%;
+	overflow-y: auto;
+}
+
+#user-bar #menus .menu .ajax {
+	width: 100%;
+	height: 11px;
+	margin: 5px auto;
+	background-image: url([[pix:theme|bar/ajax-loader]]);
+	background-repeat: no-repeat;
+	background-position: center;
+	display: none;
+}
+
+#user-bar #menus #institutions_menu .container,
+#user-bar #menus #activities_menu .container {
+	max-height: 400px;
+}
+
+#user-bar #menus #courses_menu .container,
+#user-bar #menus #applications_menu .container {
+	max-height: 362px;
+}
+
+#user-bar #menus #notifications_menu .container,
+#user-bar #menus #languages_menu .container,
+#user-bar #menus #settings_menu .container {
+	max-height: 368px;
+}
+
+#user-bar #menus #events_menu .container,
+#user-bar #menus #messages_menu .container {
+	max-height: 329px;
+}
+
+#user-bar #menus .menu .empty {
+	text-align: center;
+}
+
+#user-bar #menus .menu .all {
+	font-weight: bold;
+	line-height: 18px;
+	font-size: 13px;
+	text-align: center;
+	background-color: [[setting:menu_all_color]];
+	border-top: 1px solid [[setting:borders_color]];
+	cursor: pointer;
+}
+
+#user-bar #menus .menu .title,
+#user-bar #menus .menu .division,
+#user-bar #menus #institutions_menu .institution,
+#user-bar #menus #courses_menu .course,
+#user-bar #menus #applications_menu .application,
+#user-bar #menus #activities_menu .activity,
+#user-bar #menus #notifications_menu .notification,
+#user-bar #menus #events_menu .event,
+#user-bar #menus #messages_menu .message,
+#user-bar #menus #languages_menu .language,
+#user-bar #menus #settings_menu .setting {
+	border-bottom: 1px solid [[setting:borders_color]];
+}
+
+#user-bar #menus #institutions_menu .institution,
+#user-bar #menus #courses_menu .course,
+#user-bar #menus #applications_menu .application,
+#user-bar #menus #activities_menu .activity,
+#user-bar #menus #notifications_menu .notification,
+#user-bar #menus #events_menu .event,
+#user-bar #menus #messages_menu .message,
+#user-bar #menus #languages_menu .language,
+#user-bar #menus #settings_menu .setting {
+	cursor: pointer;
+}
+
+#user-bar #menus #institutions_menu .institution:hover,
+#user-bar #menus #courses_menu .course:hover,
+#user-bar #menus #applications_menu .application:hover,
+#user-bar #menus #activities_menu .activity:hover,
+#user-bar #menus #notifications_menu .notification:hover,
+#user-bar #menus #events_menu .event:hover,
+#user-bar #menus #messages_menu .message:hover,
+#user-bar #menus #languages_menu .language:hover,
+#user-bar #menus #settings_menu .setting:hover {
+	background-color: [[setting:hover_color]];
+}
+
+/* Left and Settings Menus
+-----------------------*/
+#user-bar #menus #institutions_menu .institution,
+#user-bar #menus #courses_menu .course,
+#user-bar #menus #applications_menu .application,
+#user-bar #menus #activities_menu .activity,
+#user-bar #menus #settings_menu .setting {
+	width: 94%;
+	padding: 5px 3%;
+}
+
+#user-bar #menus #institutions_menu .institution a,
+#user-bar #menus #courses_menu .course a,
+#user-bar #menus #applications_menu .application a,
+#user-bar #menus #activities_menu .activity a,
+#user-bar #menus #settings_menu .setting a {
+	width: 100%;
+}
+
+#user-bar #menus #institutions_menu .institution a img,
+#user-bar #menus #courses_menu .course a img,
+#user-bar #menus #applications_menu .application a img,
+#user-bar #menus #activities_menu .activity a img,
+#user-bar #menus #languages_menu .language .flag,
+#user-bar #menus #settings_menu .setting a img {
+	float: right;
+}
+
+#user-bar #menus #institutions_menu .institution a img,
+#user-bar #menus #applications_menu .application a img {
+	height: 20px;
+	margin: 5px 0px;
+}
+
+#user-bar #menus #courses_menu .course a img,
+#user-bar #menus #activities_menu .activity a img,
+#user-bar #menus #settings_menu .setting a img {
+	margin: 7px 0px;
+}
+
+/* Notifications, Messages and Events Menu
+-----------------------*/
+#user-bar #menus #notifications_menu .notification,
+#user-bar #menus #events_menu .event,
+#user-bar #menus #messages_menu .message {
+	padding: 5px 10px;
+	overflow:hidden;
+}
+
+#user-bar #menus #notifications_menu .notification > a,
+#user-bar #menus #events_menu .event > a,
+#user-bar #menus #messages_menu .message > a {
+	display: none;
+}
+
+#user-bar #menus #notifications_menu .notification .picture,
+#user-bar #menus #messages_menu .message .picture,
+#user-bar #menus #events_menu .event .picture {
+	float:left;
+}
+
+#user-bar #menus #notifications_menu .notification .picture,
+#user-bar #menus #notifications_menu .notification .picture img,
+#user-bar #menus #messages_menu .message .picture,
+#user-bar #menus #messages_menu .message .picture img {
+	width: 50px;
+	height: 50px;
+}
+
+#user-bar #menus #events_menu .event .picture,
+#user-bar #menus #events_menu .event .picture img,
+#user-bar #menus #events_menu .event .picture .color {
+	width: 16px;
+	height: 16px;
+	padding: 0;
+}
+
+#user-bar #menus #events_menu .event .picture .color {
+	margin-top: 2px;
+}
+
+#user-bar #menus #events_menu .event .content {
+	margin-left: 25px;
+	position: relative;
+}
+
+#user-bar #menus #notifications_menu .notification .content,
+#user-bar #menus #messages_menu .message .content {
+	margin-left: 55px;
+	position: relative;
+}
+
+#user-bar #menus #notifications_menu .notification .content p,
+#user-bar #menus #events_menu .event .content p,
+#user-bar #menus #messages_menu .message .content p {
+	margin-bottom: 2px;
+}
+
+#user-bar #menus #notifications_menu .notification .content .subject,
+#user-bar #menus #events_menu .event .content .name,
+#user-bar #menus #messages_menu .message .content .sender {
+	font-weight: bold;
+}
+
+#user-bar #menus #notifications_menu .notification .content .body,
+#user-bar #menus #events_menu .event .content .desc,
+#user-bar #menus #messages_menu .message .content .body {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+#user-bar #menus #notifications_menu .notification .content .course,
+#user-bar #menus #notifications_menu .notification .content .time,
+#user-bar #menus #events_menu .event .content .course,
+#user-bar #menus #messages_menu .message .content .time {
+	margin: 0;
+}
+
+#user-bar #menus #notifications_menu .notification .content .course,
+#user-bar #menus #events_menu .event .content .course {
+	float: left;
+}
+
+#user-bar #menus #notifications_menu .notification .content .time,
+#user-bar #menus #events_menu .event .content .time,
+#user-bar #menus #messages_menu .message .content .time {
+	float: right;
+	color: #999;
+}
+
+/* Languages Menu
+-----------------------*/
+#user-bar #menus #languages_menu .language {
+	font-size: 14px;
+	font-weight: bold;
+	min-height: 20px;
+	padding: 10px;
+}
+
+#user-bar #menus .langmenu {
+	display: none;
+}
+
+/* User Menu
+-----------------------*/
+#user-bar #menus #info_menu h2 {
+	font-size: 18px;
+	margin: 0;
+}
+
+#user-bar #menus #info_menu table {
+	width: 260px;
+	padding: 0;
+	margin: 10px;
+}
+
+#user-bar #menus #info_menu table tr td {
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+#user-bar #menus #info_menu table td:nth-child(2) {
+	text-align: right;
+}
+
+#user-bar #menus #info_menu .phone,
+#user-bar #menus #info_menu .email {
+	margin-bottom: 4px;
+	color: #666;
+}
+
+#user-bar #menus #info_menu .desc {
+	margin: 5px 5px 0px 0px;
+	text-align: justify;
+}
+
+#user-bar #menus #info_menu .social {
+	width: 100%;
+	height: 20px;
+}
+
+#user-bar #menus #info_menu .social a,
+#user-bar #menus #info_menu .social span {
+	width: 20px;
+	height: 20px;
+	margin-right: 3px;
+	background-image: url([[pix:theme|bar/social]]);
+	background-repeat: no-repeat;
+	display:-moz-inline-stack;
+	display: inline-block;
+	zoom:1;
+	*display:inline;
+}
+
+#user-bar #menus #info_menu a {
+	color: black;
+}
+
+#user-bar #menus #info_menu .userpicture {
+	width: 90px;
+	height: 90px;
+}
+
+#user-bar #menus #info_menu input[type=button],
+#user-bar #menus #info_menu input[type=submit] {
+	margin-left: 0;
+}
+
+
+/* Icons
+-----------------------*/
+#user-bar #user-links #notifications .icon {background-position: 0px 0px;}
+#user-bar #user-links #notifications.selected .icon {background-position: -20px 0px;}
+#user-bar #user-links #events .icon {background-position: 0px -20px;}
+#user-bar #user-links #events.selected .icon {background-position: -20px -20px;}
+#user-bar #user-links #messages .icon {background-position: 0px -40px;}
+#user-bar #user-links #messages.selected .icon {background-position: -20px -40px;}
+#user-bar #user-links #settings .icon {background-position: 0px -60px;}
+#user-bar #user-links #settings.selected .icon {background-position: -20px -60px;}
+
+
+/* Social
+-----------------------*/
+#user-bar #menus #info_menu .social .website {background-position: 0px 0px;}
+#user-bar #menus #info_menu .social .icq {background-position: -20px 0px;}
+#user-bar #menus #info_menu .social .skype {background-position: -40px 0px;}
+#user-bar #menus #info_menu .social .yahoo {background-position: -60px 0px;}
+#user-bar #menus #info_menu .social .aim {background-position: -80px 0px;}
+#user-bar #menus #info_menu .social .msn {background-position: -100px 0px;}
+
+
+/* Languages
+-----------------------*/
+#user-bar .flag {background-position: -174px -180px;}
+
+#user-bar .flag.af {background-position: 0px 0px;}
+#user-bar .flag.am {background-position: -29px 0px;}
+#user-bar .flag.az {background-position: -58px 0px;}
+#user-bar .flag.be {background-position: -87px 0px;}
+#user-bar .flag.bg {background-position: -116px 0px;}
+#user-bar .flag.bn {background-position: -145px 0px;}
+#user-bar .flag.bs {background-position: -174px 0px;}
+
+#user-bar .flag.ca {background-position: 0px -20px;}
+#user-bar .flag.cs {background-position: -29px -20px;}
+#user-bar .flag.cy {background-position: -58px -20px;}
+#user-bar .flag.da {background-position: -87px -20px;}
+#user-bar .flag.de,
+#user-bar .flag.de_kids,
+#user-bar .flag.de_commm {background-position: -116px -20px;}
+#user-bar .flag.dv {background-position: -145px -20px;}
+#user-bar .flag.el {background-position: -174px -20px;}
+
+#user-bar .flag.en,
+#user-bar .flag.en_kids {background-position: 0px -40px;}
+#user-bar .flag.en_us {background-position: -29px -40px;}
+#user-bar .flag.es_ar {background-position: -58px -40px;}
+#user-bar .flag.es,
+#user-bar .flag.es_es {background-position: -87px -40px;}
+#user-bar .flag.es_mx {background-position: -116px -40px;}
+#user-bar .flag.et {background-position: -145px -40px;}
+#user-bar .flag.fi {background-position: -174px -40px;}
+
+#user-bar .flag.fil {background-position: 0px -60px;}
+#user-bar .flag.fj {background-position: -29px -60px;}
+#user-bar .flag.fo {background-position: -58px -60px;}
+#user-bar .flag.fr {background-position: -87px -60px;}
+#user-bar .flag.fr_ca {background-position: -116px -60px;}
+#user-bar .flag.gd {background-position: -145px -60px;}
+#user-bar .flag.he {background-position: -174px -60px;}
+
+#user-bar .flag.hr {background-position: 0px -80px;}
+#user-bar .flag.hu {background-position: -29px -80px;}
+#user-bar .flag.hy {background-position: -58px -80px;}
+#user-bar .flag.id {background-position: -87px -80px;}
+#user-bar .flag.is {background-position: -116px -80px;}
+#user-bar .flag.it {background-position: -145px -80px;}
+#user-bar .flag.ja {background-position: -174px -80px;}
+
+#user-bar .flag.ka {background-position: 0px -100px;}
+#user-bar .flag.kk {background-position: -29px -100px;}
+#user-bar .flag.kl {background-position: -58px -100px;}
+#user-bar .flag.km {background-position: -87px -100px;}
+#user-bar .flag.ko {background-position: -116px -100px;}
+#user-bar .flag.lo {background-position: -145px -100px;}
+#user-bar .flag.lt {background-position: -174px -100px;}
+
+#user-bar .flag.lv {background-position: 0px -120px;}
+#user-bar .flag.mk {background-position: -29px -120px;}
+#user-bar .flag.mn {background-position: -58px -120px;}
+#user-bar .flag.ms {background-position: -87px -120px;}
+#user-bar .flag.ne {background-position: -116px -120px;}
+#user-bar .flag.nl {background-position: -145px -120px;}
+#user-bar .flag.pl {background-position: -174px -120px;}
+
+#user-bar .flag.pt {background-position: 0px -140px;}
+#user-bar .flag.pt_br {background-position: -29px -140px;}
+#user-bar .flag.ro {background-position: -58px -140px;}
+#user-bar .flag.ru {background-position: -87px -140px;}
+#user-bar .flag.si {background-position: -116px -140px;}
+#user-bar .flag.sk {background-position: -145px -140px;}
+#user-bar .flag.sl {background-position: -174px -140px;}
+
+#user-bar .flag.sm {background-position: 0px -160px;}
+#user-bar .flag.so {background-position: -29px -160px;}
+#user-bar .flag.sq {background-position: -58px -160px;}
+#user-bar .flag.sr {background-position: -87px -160px;}
+#user-bar .flag.sv {background-position: -116px -160px;}
+#user-bar .flag.th {background-position: -145px -160px;}
+#user-bar .flag.to {background-position: -174px -160px;}
+
+#user-bar .flag.tr {background-position: 0px -180px;}
+#user-bar .flag.uk {background-position: -29px -180px;}
+#user-bar .flag.ur {background-position: -58px -180px;}
+#user-bar .flag.uz {background-position: -87px -180px;}
+#user-bar .flag.vi {background-position: -116px -180px;}

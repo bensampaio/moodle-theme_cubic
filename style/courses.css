@@ -1,0 +1,373 @@
+/********************************************************
+**
+** Theme name: Cubic
+** Description: A new base theme for Moodle.
+** Creation Date: 05/07/2012
+** Author: Bruno Sampaio
+** Author URI: http://pessoa.fct.unl.pt/b.sampaio
+**
+** Customize, edit, poke, prod, and adapt to your needs.
+**
+*********************************************************/
+
+/* Courses
+---------------------------*/
+#page-course-view-topics .navbar .activities-views {
+	float: right;
+	height: 25px;
+	margin-right: 10px;
+	position: relative;
+}
+
+#page-course-view-topics .navbar .activities-views > div,
+#page-course-view-topics .navbar .activities-views > div img {
+	width: 16px;
+	height: 16px;
+}
+
+#page-course-view-topics .navbar .activities-views > div {
+	padding: 4px 6px;
+}
+
+#page-course-view-topics .navbar .activities-views .left {
+	border-radius: 5px 0px 0px 5px;
+	-webkit-border-radius: 5px 0px 0px 5px;
+	-moz-border-radius: 5px 0px 0px 5px;
+}
+
+#page-course-view-topics .navbar .activities-views .left.center {
+	border-left: 0;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+#page-course-view-topics .navbar .activities-views .right {
+	border-left: 0;
+	border-radius: 0px 5px 5px 0px;
+	-webkit-border-radius: 0px 5px 5px 0px;
+	-moz-border-radius: 0px 5px 5px 0px;
+}
+
+#page-course-loginas #notice {
+    width: 50%;
+    text-align: center;
+    margin: 10px auto;
+}
+
+#page-course-enrol .generalbox,
+#page-course-enrol .coursebox {margin-top: 20px;}
+
+#page-course-pending .singlebutton,
+#page-course-category #renameform,
+#page-course-category #themeform,
+#page-course-category #coursesearch,
+#page-course-category .singlebutton,
+#page-course-editsection .singlebutton {text-align:center;}
+
+#page-course-category .rolelink {
+    text-align: right;
+}
+
+#coursesearch,
+#coursesearch2 {margin-top: 1em;text-align:center;}
+
+#page-course-info .generalbox.icons {text-align: center;}
+#page-course-info .generalbox.info {margin-left:auto;margin-right:auto;}
+
+#page-course-pending .pendingcourserequests {margin-bottom: 1em;}
+#page-course-pending .pendingcourserequests .singlebutton {display: inline;}
+#page-course-pending .pendingcourserequests .cell {padding: 0 5px;}
+#page-course-pending .pendingcourserequests .cell.c6 {white-space: nowrap;}
+
+.coursebox {
+	width: 100%;
+	margin-bottom: 15px;
+	border-bottom: 1px solid [[setting:borders_color]];
+}
+
+.coursebox .info {float: left;width: 40%;text-align:left;}
+.coursebox .summary {float: right;text-align:left;width: 55%;}
+.coursebox .summary .category {text-align:right;}
+.coursebox .teachers {margin: 0 0 0 0.75em;}
+.coursebox .teachers li {list-style-type:none;padding:0;margin:0;}
+.coursebox .name {font-size: 1.1em;}
+
+.categorylist {width: 100%;}
+.categorylist .category .numberofcourse {font-style: italic; font-size: 0.85em; font-style: normal;}
+.categorylist .category {padding-top: 5px; padding-bottom: 5px; }
+.categorylist .category .info,
+.categorylist .category .indentation,
+.categorylist .category .name,
+.categorylist .category .image,
+.categorylist .course .name,
+.categorylist .course .info {float:left;text-align: left;}
+.categorylist .course {padding-left:18px;}
+
+.categorylist .indentation {padding-left: 20px;}
+#page-course-index .category .image {padding-right: 2px;}
+
+.categorybox {
+    border: none;
+}
+
+.categorybox .categorylist td {
+    padding: 2px;
+}
+
+.categorypicker {
+    margin: 15px 0 25px;
+}
+
+.section_add_menus {
+	text-align:right;
+}
+
+.section_add_menus .horizontal div,
+.section_add_menus .horizontal form {
+	display:inline;
+}
+
+.section_add_menus optgroup {
+	font-weight:normal;
+	font-style: italic;
+}
+
+#page-site-index .subscribelink {
+	text-align:right;
+}
+
+#page-site-index .headingblock {
+	margin-bottom: 9px;
+}
+
+#page-site-index .clearfloat {
+	float: none;
+	clear: both;
+	height:0px;
+}
+
+.path-course-view .headingblock {
+	margin-bottom: 10px;
+}
+
+.path-course-view .subscribelink {
+	text-align:right;
+}
+
+.path-course-view .unread {
+	argin-left: 3em;
+}
+
+.path-course-view .block.drag .header {
+	cursor: move;
+}
+
+.path-course-view .completionprogress {
+	float:right;
+}
+
+.path-course-view .completionprogress img.iconhelp {
+	vertical-align:top;
+}
+
+.path-course-view .section .side {
+    padding: 5px 0;
+}
+
+.path-course-view .section .summary {
+	line-height:normal;
+}
+
+.path-course-view .section .content {
+    padding: 10px;
+}
+
+.path-course-view .section .content .section {
+    margin: 0;
+}
+
+.path-course-view .section .content .weekdates {
+    font-size: 1em;
+    color: #777;
+    font-weight: normal;
+}
+
+.path-course-view .section_add_menus {
+    margin-top: 1em;
+}
+
+h2.headingblock {
+    border-width: 0 0 1px 0;
+    padding: 5px 5px 2px;
+    font-weight: normal;
+    font-size: 1.2em;
+    background: #F2F2F2;
+    color: #251c17;
+}
+
+.course-content .main {
+    background: #F2F2F2;
+    border: 1px solid [[setting:borders_color]];
+}
+
+.course-content .current {
+    background: #7BBF8A;
+}
+
+.course-content .current .left.side {
+	color: #fff;
+}
+
+.course-content .main .content {
+    background: #fff;
+}
+
+
+/* Drag and Drop
+---------------------------*/
+#dndupload-status {width:40%;margin:0 30%;padding:6px;border:1px solid #ddd;text-align:center;background:#ffc;position:absolute;z-index:9999;box-shadow:2px 2px 5px 1px #ccc;-o-box-shadow:2px 2px 5px 1px #ccc;-moz-box-shadow:2px 2px 5px 1px #ccc;-webkit-box-shadow:2px 2px 5px 1px #ccc;border-radius:0px 0px 8px 8px;z-index: 0;}
+.dndupload-preview {color:#909090;border:1px dashed #909090;list-style:none;}
+.dndupload-progress-outer {width:70px;border:1px solid black;height:10px;display:inline-block;margin:0;padding:0;overflow:hidden;position:relative;}
+.dndupload-progress-inner {width:0%;height:100%;background-color:green;display:inline-block;margin:0;padding:0;float:left;}
+.dndupload-hidden {display:none;}
+
+
+/*all courses view*/
+#page-course-index .categorylist .course.clearfloat { height: auto; }
+
+.weeks-format, /* Window-width: 800 pixels.IE doesn't support, see inline IE conditional comment. */
+.topics-format {margin-top: 8px;min-width: 763px;}
+.categoryboxcontent {border-width:1px;border-style:solid;}
+
+/* Course and category combo list on front page */
+.course_category_tree .controls {
+	color: #888;
+    font-size: 0.9em;
+    margin-top: 10px;
+	visibility: hidden;
+}
+
+.course_category_tree .controls div {
+	margin: 0 5px 0 0;
+	display:inline;
+	cursor:pointer;
+}
+
+.course_category_tree .category.with_children>.category_label {background-image:url([[pix:moodle|t/expanded]]);background-repeat: no-repeat;}
+.course_category_tree .category_label {padding-left:13px;}
+.course_category_tree .category .category {margin:5px;}
+.course_category_tree .category .courses {padding-left:16px;}
+.course_category_tree .category .courses .course_link {display:block;background-image:url([[pix:moodle|i/course]]);background-repeat: no-repeat;padding-left:18px;}
+.course_category_tree .category .course {position:relative;}
+.course_category_tree .category .course_info {position:absolute;right:0;top:0;}
+.course_category_tree .category .course_info a,
+.course_category_tree .category .course_info div {float:left;width:16px;height:16px;}
+.jsenabled .course_category_tree .controls {visibility: visible;}
+.jsenabled .course_category_tree .category.with_children.collapsed .category_label {background-image:url([[pix:moodle|t/collapsed]]);}
+.jsenabled .course_category_tree .category.with_children.collapsed .subcategories,
+.jsenabled .course_category_tree .category.with_children.collapsed .courses {display:none;}
+.path-course .clearfloat {float:none; clear:both;height:0px;}
+
+/**
+* Overide for RTL layout
+*/
+.dir-rtl .coursebox .info {float: right; text-align: right;}
+.dir-rtl .coursebox .summary {text-align:right;}
+.dir-rtl .course_category_tree .category.with_children> .category_label {background-position: center right; padding-right: 18px;}
+.dir-rtl .course_category_tree .category_label, .dir-rtl .course_category_tree .category .course {padding-right:18px;}
+.dir-rtl.jsenabled .course_category_tree .category.with_children.collapsed .category_label {background-image:url([[pix:moodle|t/collapsed_rtl]]);}
+.dir-rtl .course_category_tree .category .courses .course_link {background-position:center right; padding-right:18px;}
+.dir-rtl .clearfloat {float:none; clear:both;height:0px;}
+.dir-rtl .categorylist .category .info,
+.dir-rtl .categorylist .category .indentation,
+.dir-rtl .categorylist .category .name,
+.dir-rtl .categorylist .category .image,
+.dir-rtl .categorylist .course .name,
+.dir-rtl .categorylist .course .indentation,
+.dir-rtl .categorylist .course .info {float:right;text-align: right;}
+.dir-rtl .categorylist .course {padding-right:18px;}
+
+#page-course-index.dir-rtl .category .image {padding-left: 5px; padding-right: 0px;}
+#page-course-index.dir-rtl .indentation {padding-left: 0px;padding-right: 30px;}
+
+table.category_subcategories {margin-bottom:1em;}
+table.category_subcategories td {white-space: nowrap;}
+
+
+/* Report
+---------------------------*/
+#page-report .plugin p,
+#page-report .logselectform {
+    text-align: center;
+}
+
+#page-report .logselectform .select {
+    margin: 0 4px 10px;
+}
+
+#page-report-outline-index .loginfo {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#page-report-participation-index #participationreport {
+    text-align: center;
+}
+
+#page-report-participation-index #participationreport .reporttable {
+    margin: 0 auto 1em;
+}
+
+#page-report-participation-index #participationreport .selectbuttons input {
+    margin: 10px 5px;
+}
+
+#page-report-loglive-index .info,
+#page-report-log-index .logselectform,
+#page-report-log-index .info,
+#page-report-log-index .paging {
+    text-align: center;
+}
+
+#page-report-log-index .logselectform select,
+#page-report-log-index .logselectform input {
+    margin: 2px 4px;
+}
+
+#page-report-loglive-index .generaltable,
+#page-report-log-index .generaltable {
+    margin: 5px auto;
+}
+
+
+/* Publication
+---------------------------*/
+#page-course-publish-metadata .metadatatext {
+    width: 400px;
+}
+
+#page-course-publish-metadata .hubscreenshot {
+    display:inline;
+    float:left;
+    margin-right:10px;
+}
+#page-course-publish-metadata .hubscreenshot img {
+    vertical-align: bottom;
+}
+
+#page-course-publish-metadata .hubdescription {}
+
+#page-course-publish-metadata .hubinfo {
+    display:block;
+    margin-bottom:20px;
+}
+#page-course-publish-metadata .hublink {}
+
+#page-course-publish-backup .courseuploadtextinfo {
+    text-align: center;
+}
+
+#page-course-publish-backup .sharecoursecontinue  {
+    text-align: center;
+}

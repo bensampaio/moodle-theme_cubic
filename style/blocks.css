@@ -1,0 +1,409 @@
+/********************************************************
+**
+** Theme name: Cubic
+** Description: A new base theme for Moodle.
+** Creation Date: 05/07/2012
+** Author: Bruno Sampaio
+** Author URI: http://pessoa.fct.unl.pt/b.sampaio
+**
+** Customize, edit, poke, prod, and adapt to your needs.
+**
+*********************************************************/
+
+/* Blocks
+-----------------------*/
+.block {
+	width: 210px;
+	padding: 5px;
+	margin: 0 auto;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.block .header,
+.block .content {
+    padding: 5px;
+}
+
+.block .title h2 {
+    font-size: 1.2em;
+	font-weight: bold;
+    margin: 0;
+	color: black;
+}
+
+.block .header .block_action {
+	float:right;
+	padding: 4px;
+	vertical-align:top;
+}
+
+.block .block_action img {
+	float: right;
+	width: 13px;
+	height: 13px;
+	margin-left: 5px;
+}
+
+.block_action .reloadnavigation {
+    margin-right: 3px;
+}
+
+.block .header .commands {
+	margin: 0px;
+	padding: 0px;
+}
+
+.block h3.main {
+    padding: 0.5em 0;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.block.hidden .content {
+	display: none;
+}
+
+.block .content .list li.listentry {
+	clear:both;
+}
+
+.block .content .list .c0 {
+	display:inline;
+}
+
+.block .content .list .c1 {
+	margin-left:5px;
+	display:inline;
+}
+
+.block .footer {
+	margin-top: 5px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.block .blockannotation {
+	font-size:0.75em;
+	margin: -1em 0 1em;
+}
+
+.block_navigation .block_tree li {
+	overflow:hidden;
+}
+
+/** block_list blocks need column stuffs **/
+.block.list_block .unlist > li > .column {
+	display:-moz-inline-stack;
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+}
+
+.ie6 .block.list_block .unlist .column {
+	display:inline;
+}
+
+.block.beingmoved {
+	border-width: 2px;
+	border-style: dashed;
+}
+
+.blockmovetarget {
+	display: block;
+	height: 1em;
+	margin-bottom: 1em;
+	border-width: 2px;
+	border-style: dashed;
+}
+
+.block-region .invisible {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+.block .block-hider-show,
+.block .block-hider-hide {
+	cursor:pointer;
+}
+
+.block .block-hider-show,
+.block.hidden .block-hider-hide {
+	display:none;
+}
+
+.block.hidden .block-hider-show {
+	display:inline;
+}
+
+/** Overide for RTL layout **/
+.dir-rtl .block .header,
+.dir-rtl .block h2.header {text-align:right;}
+.dir-rtl .block .header .commands { text-align: right;}
+
+
+/* Activities
+------------------------------*/
+.block_activity_modules ul li {
+	margin-bottom: 5px;
+}
+
+
+/* Login
+------------------------------*/
+.block_login .username,
+.block_login .password,
+.block_login .btn {
+	width: 100%;
+	margin-bottom: 0.5em;
+}
+
+.block_login .loginform input[type=text],
+.block_login .loginform input[type=password],
+.block_login .loginform input[type=submit] {
+	width: 96%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.block_login .footer {
+    text-align: center;
+}
+
+
+/* News
+-------------------------------*/
+.block_news_items .newlink {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.block_news_items .post .head {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.block_news_items .post .date {
+    float: right;
+    text-align: right;
+}
+
+.block_news_items .post .name {
+    float: left;
+    color: #555;
+}
+
+
+/* Calendar
+-----------------------*/
+.block .minicalendar {
+	width:100%;
+	margin:10px auto;
+	border-collapse: separate;
+}
+
+.block .minicalendar h3 {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.maincalendar .calendarmonth th,
+.minicalendar th {
+    background: none;
+}
+
+.minicalendar th abbr {
+    border: none;
+}
+
+.block .minicalendar th,
+.block .minicalendar td {
+	padding:2px;
+	font-size: 0.85em;
+	border-color: transparent;
+}
+
+.block .minicalendar td:hover {
+	background-color: [[setting:hover_color]];
+}
+
+.block .minicalendar td.weekend {
+	color:#A00;
+}
+
+.block_calendar_upcoming .event {
+    font-weight: bold;
+}
+
+.block_calendar_upcoming .date {
+    font-weight: normal;
+    font-size: 0.85em;
+    font-style: italic;
+    margin-left: 20px;
+}
+
+.block .calendar-controls .previous {
+	width: 12%;
+	float: left;
+	text-align: left;
+	display: block;
+}
+
+.block .calendar-controls .current {
+	float:left;
+	width:76%;
+	text-align: center;
+	display: block;
+}
+
+.block .calendar-controls .next {
+	float: left;
+	width: 12%;
+	text-align: right;
+	display: block;
+}
+
+.block .filters table {
+	width: 100%;
+	padding: 2px;
+	border-collapse:separate;
+	border-spacing: 2px;
+}
+
+.block .filters table td {
+	padding: 2px 5px;
+}
+
+.block .filters .eventskey img.iconsmall {
+	margin: 3px 0px;
+}
+
+.block .content h3.eventskey {
+	margin-top:0.5em;
+	margin-bottom:0;
+	margin-left:0.5em;
+}
+
+.calendar_filters td,
+.minicalendar td,
+.minicalendar th {
+    padding: 2px;
+    font-size: 0.85em;
+}
+
+/* Recent Activity
+--------------------------------*/
+.block_recent_activity .activitydate {
+    font-size: 0.9em;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.block_recent_activity .activityhead {
+    font-size: 0.95em;
+    margin: 0.5em 0;
+}
+
+
+/* Messages and Online Users
+-------------------------------*/
+.block_messages .info,
+.block_online_users .info {
+    text-align: center;
+    font-size: 0.85em;
+    color: #444;
+    margin-bottom: 7px;
+}
+
+
+/* Blog Menu
+------------------------------*/
+.block_blog_menu .list li {
+    font-size: 0.9em;
+    margin: 0.25em 0;
+}
+
+/* Search Foruns
+------------------------------*/
+.block_search_forums form #searchform_search,
+.block_search_forums form #searchform_button {
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.block_search_forums form #searchform_search {
+	max-width: 55%;
+	margin-right: 10px;
+}
+
+.block_search_forums form #searchform_button {
+	max-width: 40%;
+}
+
+
+/* Online Users
+-----------------------*/
+.block_online_users .content .list li.listentry {
+    height: 35px;
+	padding: 3px 1%;
+	position: relative;
+}
+
+.block_online_users .content .list li.listentry:hover {
+    background-color: [[setting:hover_color]];
+}
+
+.block_online_users .content .list li.listentry .user {
+	margin-right: 18px;
+    position:relative;
+	clear: both;
+}
+
+.block .content .userpicture,
+.block_online_users .content .list li.listentry .user .userpicture {
+	width: 35px;
+	height: 35px;
+	margin-right:5px;
+}
+
+.block_online_users .content .list li.listentry .user a {
+	height: 100%;
+	vertical-align: top;
+	display: block;
+}
+
+.block_online_users .content .list li.listentry .user a:nth-child(1) {
+	float: left;
+	width: 40px;
+}
+
+.block_online_users .content .list li.listentry .user a:nth-child(2) {
+	margin-left: 40px;
+	position: relative;
+}
+
+.block_online_users .content .list li.listentry .message {
+	width: 13px;
+	height: 13px;
+	top: 5px;
+	right: 5px;
+	position: absolute;
+}
+
+.block_online_users .content .list li.listentry .message a {
+	width: 13px;
+	height: 13px;
+	display: block;
+}
+
+.block_online_users .content .list li.listentry .message a .iconsmall {
+	margin: 0;
+	vertical-align: top;
+}
+
+/* Settings
+-----------------------*/
+.block_settings .content .adminsearchform #adminsearchquery {
+	width: 95px;
+}

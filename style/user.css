@@ -1,0 +1,149 @@
+/********************************************************
+**
+** Theme name: Cubic
+** Description: A new base theme for Moodle.
+** Creation Date: 05/07/2012
+** Author: Bruno Sampaio
+** Author URI: http://pessoa.fct.unl.pt/b.sampaio
+**
+** Customize, edit, poke, prod, and adapt to your needs.
+**
+*********************************************************/
+
+/* User
+-----------------------*/
+#page-user-view .buttons {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#page-user-view .buttons div {
+    padding: 0 0 10px;
+}
+
+#page-user-index .controls {
+    width: 100%
+}
+
+#page-user-index .controls .singleselect {
+    margin: 0;
+}
+
+.userprofile .fullprofilelink {
+	text-align:center;
+	margin:10px;
+}
+
+.userprofile .profilepicture {
+	float:left;
+	margin-right:10px;
+}
+
+.userprofile .description {
+	margin-bottom:20px;
+}
+
+.userprofile .list {
+    margin-top: 10px;
+}
+
+.userprofile .list td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.userprofile .list .c0 {
+    padding-left: 0;
+    font-weight: bold;
+}
+
+.descriptionbox {
+    margin-left: 110px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.rolesform {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.user-box {margin:8px;width:115px;height:160px;text-align:center;float:left;clear: none;}
+
+.userlist #showall {margin: 10px 0px;}
+.userlist .buttons {text-align: center;}
+.userlist table#participants {width: 100%;text-align:center;margin: 1em auto 0;}
+.userlist table#participants td,
+.userlist table#participants th {vertical-align: middle;text-align: left;padding: 4px;}
+.userlist table.controls {width: 100%;}
+.userlist table.controls tr {vertical-align: top;}
+.userlist table.controls td.right,
+.userlist table.controls td.left {padding: 4px;}
+.userlist table.controls .right {text-align: right;}
+
+#participantsform {
+    text-align: center;
+}
+
+.userinfobox {
+	width:100%;
+	padding:10px;
+	border:1px solid [[setting:borders_color]];
+	border-collapse: separate;
+}
+.userinfobox .left,
+.userinfobox .side {width: 100px;vertical-align: top;}
+.userinfobox .userpicture {width: 100px;height: 100px;}
+.userinfobox .content {text-align: left;vertical-align: top;padding-left:10px;}
+.userinfobox .links {
+	width: 100px;
+	padding: 5px;
+	padding-left: 10px;
+	vertical-align: top;
+	background: #f4f4f4;
+}
+.userinfobox .links a {
+	display: block;
+	text-align: left;
+}
+.userinfobox .list td {padding: 3px;}
+.userinfobox .username {padding-bottom: 20px;font-weight: bold;}
+.userinfobox td.label {text-align:right;white-space: nowrap;vertical-align: top;font-weight:bold;}
+
+.groupinfobox {
+    border: 1px solid [[setting:borders_color]];
+    width: 60%;
+    margin: 0px 20%;
+}
+.groupinfobox .left {padding: 10px;width: 100px;vertical-align: top;}
+
+.course-participation #showall {text-align:center;margin: 10px 0px;}
+#user-policy .noticebox {text-align:center;margin-left:auto;margin-right:auto;margin-bottom:10px;width:80%;height:250px;}
+#user-policy #policyframe {width:100%;height:100%;}
+.iplookup #map {margin:auto;}
+
+.userselector select {width: 100%;}
+.userselector div {margin-top: 0.2em;}
+.userselector div label {margin-right: 0.3em;}
+#userselector_options {padding:0.3em 0;}
+#userselector_options .collapsibleregioncaption {font-weight: bold;}
+#userselector_options p {margin:0.2em 0;text-align:left;}
+.dir-rtl #userselector_options p {text-align:right;}
+
+.path-user .description {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/** user full profile */
+#page-course-view-topics .messagebox,
+#page-user-profile .messagebox,
+#page-course-view-weeks .messagebox {text-align:center;margin-top: 10px;margin-left:auto;margin-right:auto;}
+
+/** Overide for RTL layout **/
+.dir-rtl .userprofile .profilepicture {float:right; margin-left:20px;margin-right:0px;}
+.dir-rtl .descriptionbox {margin-right: 110px;margin-left: 0px; }
+.dir-rtl .userlist table#participants td,
+.dir-rtl .userlist table#participants th {text-align: right;}
+.dir-rtl .userlist table#participants {margin: 0 auto;}
