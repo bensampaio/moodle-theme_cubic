@@ -14,7 +14,7 @@ $string['choosereadme'] =
 	'<div class="clearfix">
 		<div class="theme_screenshot">
 			<h2>Cubic</h2>
-			<img src="cubic/pix/screenshot.jpg" />
+			<img src="cubic/pix/screenshot.png" />
 		</div>
 		<div class="theme_description">
 			<h2>About</h2>
