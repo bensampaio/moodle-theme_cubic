@@ -1,7 +1,7 @@
 <?php
 /**
  * Strings for component 'theme_cubic', language 'en', branch 'MOODLE_22_STABLE'
- * @copyright 2012 Bruno Sampaio, Portugal
+ * @copyright 2013 Bruno Sampaio, Portugal
  */
 
 /* Theme
@@ -52,18 +52,18 @@ $string['menu-messages'] = 'Messages';
 $string['menu-languages'] = 'Languages';
 $string['menu-settings'] = 'Settings';
 
-$string['empty-institutions'] = 'You haven\'t';
-$string['empty-courses'] = 'You haven\'t';
-$string['empty-applications'] = 'You haven\'t';
-$string['empty-activities'] = 'You haven\'t';
-$string['empty-notifications'] = 'You haven\'t';
-$string['empty-events'] = 'You haven\'t new';
-$string['empty-messages'] = 'You haven\'t new';
+$string['empty-institutions'] = 'There aren\'t Institutions';
+$string['empty-courses'] = 'You are not enrolled to any Course';
+$string['empty-applications'] = 'You haven\'t Applications';
+$string['empty-activities'] = 'You haven\'t Activities';
+$string['empty-notifications'] = 'You haven\'t Notifications';
+$string['empty-events'] = 'You haven\'t new Events';
+$string['empty-messages'] = 'You haven\'t new Messages';
 
 $string['see-all'] = 'See All';
 
-$string['file_error'] = 'Some files are missing you must install them first to use this component.';
-$string['file_note'] = 'You can also remove this component from the user bar on theme settings page.';
+$string['plugin-missing'] = 'To use this component you need to install another plugin that can be found here:';
+$string['plugin-note'] = 'You can also remove this component from the user bar on theme settings page.';
 
 /* Settings
 ------------------------*/

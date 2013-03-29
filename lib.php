@@ -1,7 +1,7 @@
 <?
 /**
  * Lib functions for the cubic theme.
- * @copyright 2012 Bruno Sampaio
+ * @copyright 2013 Bruno Sampaio
  */
 
 
@@ -75,13 +75,13 @@ function cubic_get_layout_conditions() {
  * Get table or file error message.
  * @return string (HTML)
  */
-function cubic_get_file_error() {
+function cubic_get_file_error($url) {
 	return
 		html_writer::start_tag('div', array('class' => 'notifytiny notifyproblem')).
-			get_string('file_error', 'theme_cubic').
+			get_string('plugin-missing', 'theme_cubic')." <a href=\"$url\" >$url</a>".
 		html_writer::end_tag('div').
 		html_writer::start_tag('div', array('class' => 'notifytiny notifywarning')).
-			get_string('file_note', 'theme_cubic').
+			get_string('plugin-note', 'theme_cubic').
 		html_writer::end_tag('div');
 }
 
@@ -177,6 +177,7 @@ function cubic_get_events_list($records, $count=false) {
 	global $CFG;
 	
 	if(isloggedin() && !isguestuser()) {
+		
 		//Filter Events by Course
 		include_once($CFG->dirroot .'/calendar/lib.php');
 		$filtercourse = calendar_get_default_courses();
@@ -353,28 +354,28 @@ function cubic_get_messages_count() {
 function cubic_get_user_institutions() {
 	global $CFG, $OUTPUT;
 	
-	$file = $CFG->dirroot . '/institution/lib.php';
+	$file = $CFG->dirroot . '/local/institutions/lib.php';
 	$html = '<div class="container">';
 	
 	if(!@file_exists($file) ) {
-		$html.= cubic_get_file_error().'</div>';
+		$html.= cubic_get_file_error('https://moodle.org/plugins/view.php?plugin=local_institutions').'</div>';
 	}
 	else {
 		include_once($file);
 
 		$title = get_string('menu-intitutions','theme_cubic');
 
-		if(!institutions_table_exists()) {
-			$html.= print_institutions_table_error();
+		if(!local_institutions_table_exists()) {
+			$html.= local_institutions_print_table_error();
 		}
 		else {
-			$institutionsList = get_all_institutions();
+			$institutionsList = local_institutions_get_all();
 
 			if(count($institutionsList) > 0) {
 				foreach($institutionsList as $institution) {
 					$html.= 
 						'<div class="institution">'.
-							'<a href="'.$CFG->wwwroot.'/institution/view.php?id='.$institution->id.'">'.
+							'<a href="'.$CFG->wwwroot.'/local/institutions/view.php?id='.$institution->id.'">'.
 								$institution->shortname.
 								'<img src="'.$institution->logo.'" />'.
 							'</a>'.
@@ -384,14 +385,14 @@ function cubic_get_user_institutions() {
 			else {
 				$html.= 
 					'<div class="empty">'.
-						get_string('empty-institutions','theme_cubic').' '.$title.'.'.
+						get_string('empty-institutions','theme_cubic').
 					'</div>';
 			}
 		}
 
 		$html.= 
 			'</div>'.
-			'<a href="'.$CFG->wwwroot.'/institution/" class="all">'.
+			'<a href="'.$CFG->wwwroot.'/local/institutions/" class="all">'.
 				get_string('see-all','theme_cubic').' '.$title.
 			'</a>';
 	}
@@ -429,7 +430,7 @@ function cubic_get_user_courses() {
 		else {
 			$html.= 
 				'<div class="empty">'.
-					get_string('empty-courses','theme_cubic').' '.$title.'.'.
+					get_string('empty-courses','theme_cubic').
 				'</div>';
 		}
 
@@ -451,28 +452,28 @@ function cubic_get_user_courses() {
 function cubic_get_user_applications() {
 	global $CFG, $OUTPUT;
 	
-	$file = $CFG->dirroot . '/application/lib.php';
+	$file = $CFG->dirroot . '/local/applications/lib.php';
 	$html = '<div class="container">';
 	
 	if(!@file_exists($file) ) {
-		$html.= cubic_get_file_error().'</div>';
+		$html.= cubic_get_file_error('https://moodle.org/plugins/view.php?plugin=local_applications').'</div>';
 	}
 	else {
 		include_once($file);
 		
 		$title = get_string('menu-applications','theme_cubic');
 
-		if(!applications_table_exists()) {
-			$html.= print_applications_table_error();
+		if(!local_applications_table_exists()) {
+			$html.= local_applications_print_table_error();
 		}
 		else {
-			$applicationsList = get_user_applications();
+			$applicationsList = local_applications_get_user_apps();
 
 			if(count($applicationsList) > 0) {
 				foreach($applicationsList as $application) {
 					$html.= 
 						'<div class="application">'.
-							'<a href="'.$CFG->wwwroot.'/application/view.php?id='.$application->id.'">'.
+							'<a href="'.$CFG->wwwroot.'/local/applications/view.php?id='.$application->id.'">'.
 								$application->name.
 								'<img src="'.$application->icon.'" />'.
 							'</a>'.
@@ -482,14 +483,14 @@ function cubic_get_user_applications() {
 			else {
 				$html.= 
 					'<div class="empty">'.
-						get_string('empty-applications','theme_cubic').' '.$title.'.'.
+						get_string('empty-applications','theme_cubic').
 					'</div>';
 			}
 		}
 
 		$html.= 
 			'</div>'.
-			'<a href="'.$CFG->wwwroot.'/application/" class="all">'.
+			'<a href="'.$CFG->wwwroot.'/local/applications/" class="all">'.
 				get_string('see-all','theme_cubic').' '.$title.
 			'</a>';
 	}
@@ -543,7 +544,7 @@ function cubic_get_user_activities() {
 		if(!$hasActivities) {
 			$html.= 
 				'<div class="empty">'.
-					get_string('empty-activities','theme_cubic').' '.$title.'.'.
+					get_string('empty-activities','theme_cubic').
 				'</div>';
 		}
 
@@ -599,7 +600,7 @@ function cubic_get_user_notifications($records=0) {
 			if(!$hasNotifications) {
 				$html.= 
 					'<div class="empty">'.
-						get_string('empty-notifications','theme_cubic').' '.$title.'.'.
+						get_string('empty-notifications','theme_cubic').
 					'</div>';
 			}
 		}
@@ -663,7 +664,7 @@ function cubic_get_user_events($records=0) {
 			else {
 				$html.=
 					'<div class="empty">'.
-						get_string('empty-events','theme_cubic').' '.$title.'.'.
+						get_string('empty-events','theme_cubic').
 					'</div>';
 			}
 		}
@@ -729,7 +730,7 @@ function cubic_get_user_messages($records=0) {
 			else {
 				$html.=
 					'<div class="empty">'.
-						get_string('empty-messages','theme_cubic').' '.$title.'.'.
+						get_string('empty-messages','theme_cubic').
 					'</div>';
 			}
 		}

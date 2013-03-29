@@ -1,7 +1,7 @@
 <?php
 /**
  * Strings for component 'theme_cubic', language 'pt', branch 'MOODLE_22_STABLE'
- * @copyright 2012 Bruno Sampaio, Portugal
+ * @copyright 2013 Bruno Sampaio, Portugal
  */
 
 /* Theme
@@ -52,18 +52,18 @@ $string['menu-messages'] = 'Mensagens';
 $string['menu-languages'] = 'Línguas';
 $string['menu-settings'] = 'Opções';
 
-$string['empty-institutions'] = 'Você não tem';
-$string['empty-courses'] = 'Você não tem';
-$string['empty-applications'] = 'Você não tem';
-$string['empty-activities'] = 'Você não tem';
-$string['empty-notifications'] = 'Você não tem';
-$string['empty-events'] = 'Você não tem novos';
-$string['empty-messages'] = 'Você não tem novas';
+$string['empty-institutions'] = 'Não existem Instituições';
+$string['empty-courses'] = 'Você não está inscrito em Cursos';
+$string['empty-applications'] = 'Você não tem Aplicações';
+$string['empty-activities'] = 'Você não tem Atividades';
+$string['empty-notifications'] = 'Você não tem Notificações';
+$string['empty-events'] = 'Você não tem novos Eventos';
+$string['empty-messages'] = 'Você não tem novas Mensagens';
 
 $string['see-all'] = 'Ver Todas as';
 
-$string['table_file_error'] = 'Não foram encontrados os ficheiros necessários para usar este componente, instale-os primeiro.';
-$string['table_file_note'] = 'Este componente pode ser removido da barra de utilizador na página de opções deste tema.';
+$string['plugin-missing'] = 'Para usar este componente é necessário outro plugin, que pode ser encontrado em:';
+$string['plugin-note'] = 'Este componente pode ser removido da barra de utilizador na página de opções deste tema.';
 
 /* Settings
 ------------------------*/

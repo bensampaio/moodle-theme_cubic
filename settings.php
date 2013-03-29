@@ -2,7 +2,7 @@
 
 /**
  * Settings for the cubic theme
- * @copyright 2012 Bruno Sampaio
+ * @copyright 2013 Bruno Sampaio
  */
 
 defined('MOODLE_INTERNAL') || die;

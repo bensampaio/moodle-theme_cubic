@@ -1462,6 +1462,14 @@ img.resize {height: 1em;width: 1em;}
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76BF6B', endColorstr='#3B8230', GradientType=0 );
 }
 
+.adminwarning a,
+.notifyproblem a,
+.notifywarning a,
+.notifysuccess a {
+	line-height: 1.3em !important;
+	color: #EEE;
+}
+
 .reportlink {text-align:right;}
 a.autolink.glossary:hover {cursor: help;}
 
