@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * Lib functions for the cubic theme.
  * @copyright 2013 Bruno Sampaio
