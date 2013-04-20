@@ -834,25 +834,25 @@ function cubic_get_user_settings() {
 			'<div class="container">'.
 				'<div class="setting">'.
 					'<a href="'.$CFG->wwwroot.'/user/edit.php?id='.$USER->id.'">'.
-						'Edit Profile'.
+						get_string('settings-edit','theme_cubic').
 						'<img src="'.$OUTPUT->pix_url('t/edit').'" class="icon" />'.
 					'</a>'.
 				'</div>'.
 				'<div class="setting">'.
 					'<a href="'.$CFG->wwwroot.'/login/change_password.php?id=1">'.
-						'Change Password'.
+						get_string('settings-password','theme_cubic').
 						'<img src="'.$OUTPUT->pix_url('i/key').'" class="icon" />'.
 					'</a>'.
 				'</div>'.
 				'<div class="setting">'.
 					'<a href="'.$CFG->wwwroot.'/message/edit.php?id='.$USER->id.'">'.
-						'Messaging'.
+						get_string('settings-msg','theme_cubic').
 						'<img src="'.$OUTPUT->pix_url('t/email').'" class="icon" />'.
 					'</a>'.
 				'</div>'.
 				'<div class="setting">'.
 					'<a href="'.$CFG->wwwroot.'/login/logout.php?sesskey='.sesskey().'">'.
-						'Logout'.
+						get_string('settings-logout','theme_cubic').
 						'<img src="'.$OUTPUT->pix_url('a/logout').'" class="icon" />'.
 					'</a>'.
 				'</div>'.
@@ -863,13 +863,13 @@ function cubic_get_user_settings() {
 			'<div class="container">'.
 				'<div class="setting">'.
 					'<a href="'.$CFG->wwwroot.'/login/index.php">'.
-						'Login'.
+						get_string('settings-login','theme_cubic').
 						'<img src="'.$OUTPUT->pix_url('a/login').'" class="icon" />'.
 					'</a>'.
 				'</div>'.
 				'<div class="setting">'.
 					'<a href="'.$CFG->wwwroot.'/login/forgot_password.php">'.
-						'Recover Password'.
+						get_string('settings-reset','theme_cubic').
 						'<img src="'.$OUTPUT->pix_url('i/key').'" class="icon" />'.
 					'</a>'.
 				'</div>'.

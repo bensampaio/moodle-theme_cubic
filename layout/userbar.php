@@ -40,33 +40,33 @@
 	<div id="user-links">
 		<ul>
 			<?php if(isloggedin() && !isguestuser()) { ?>
-			<li id="notifications">
+			<li id="notifications" title="<?php echo get_string('menu-notifications','theme_cubic'); ?>">
 				<?php echo cubic_get_notifications_count(); ?>
 				<div class="icon"></div>
 			</li>
 			
-			<li id="events">
+			<li id="events" title="<?php echo get_string('menu-events','theme_cubic'); ?>">
 				<?php echo cubic_get_events_count(); ?>
 				<div class="icon"></div>
 			</li>
 			
-			<li id="messages">
+			<li id="messages" title="<?php echo get_string('menu-messages','theme_cubic'); ?>">
 				<?php echo cubic_get_messages_count(); ?>
 				<div class="icon"></div>
 			</li>
 			<?php } ?>
 			
 			<?php if($conditions['lang']) { ?>
-			<li id="languages">
+			<li id="languages" title="<?php echo get_string('menu-languages','theme_cubic'); ?>">
 				<div class="flag <?php echo current_language(); ?>"></div>
 			</li>
 			<?php } ?>
 			
-			<li id="info">
+			<li id="info" title="<?php echo get_string('menu-info','theme_cubic'); ?>">
 				<?php echo cubic_get_user_picture(20); ?>
 			</li>
 			
-			<li id="settings">
+			<li id="settings" title="<?php echo get_string('menu-settings','theme_cubic'); ?>">
 				<div class="icon"></div>
 			</li>
 		</ul>

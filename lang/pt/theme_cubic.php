@@ -52,7 +52,15 @@ $string['menu-notifications'] = 'Notificações';
 $string['menu-events'] = 'Eventos';
 $string['menu-messages'] = 'Mensagens';
 $string['menu-languages'] = 'Línguas';
+$string['menu-info'] = 'Eu';
 $string['menu-settings'] = 'Opções';
+
+$string['settings-edit'] = 'Editar perfil';
+$string['settings-password'] = 'Alterar palavra-chave';
+$string['settings-msg'] = 'Mensagens';
+$string['settings-logout'] = 'Sair';
+$string['settings-login'] = 'Entrar';
+$string['settings-reset'] = 'Recuperar palavra-chave';
 
 $string['empty-institutions'] = 'Não existem Instituições';
 $string['empty-courses'] = 'Você não está inscrito em Cursos';
@@ -79,6 +87,8 @@ $string['logo_desc'] = 'URL para a imagem de logotipo principal.';
 
 $string['bar_logo'] = 'Logotipo da Barra';
 $string['bar_logo_desc'] = 'URL para a imagem de logotipo na barra de topo. Este URL deve referenciar uma imagem dentro da pasta pix deste tema (Por exemplo: se tiver o ficheiro "/theme/cubic/pix/new_logo.png", o valor deste campo deverá ser "new_logo").';
+
+$string['feedback_desc'] = 'URL para página de feedback (ao fornecer este URL será disponibilizado à direita de todas as páginas um botão de feedback).';
 
 $string['bar_color'] = 'Cor da Barra';
 $string['bar_color_desc'] = 'Cor de fundo da barra de topo.';

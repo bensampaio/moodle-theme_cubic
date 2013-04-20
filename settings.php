@@ -34,6 +34,12 @@ if ($ADMIN->fulltree) {
 	$title = get_string('show_applications','theme_cubic');
 	$description = get_string('show_applications_desc', 'theme_cubic');
 	$settings->add(new admin_setting_configcheckbox($name, $title, $description, true));
+	
+	// Feedback
+	$name = 'theme_cubic/feedback';
+	$title = get_string('feedback');
+	$description = get_string('feedback_desc', 'theme_cubic');
+	$settings->add(new admin_setting_configtext($name, $title, $description, '', PARAM_URL));
 
 	// Course Default View
 	$name = 'theme_cubic/activity_view';

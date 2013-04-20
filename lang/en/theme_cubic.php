@@ -51,7 +51,15 @@ $string['menu-notifications'] = 'Notifications';
 $string['menu-events'] = 'Events';
 $string['menu-messages'] = 'Messages';
 $string['menu-languages'] = 'Languages';
+$string['menu-info'] = 'You';
 $string['menu-settings'] = 'Settings';
+
+$string['settings-edit'] = 'Edit Profile';
+$string['settings-password'] = 'Change Password';
+$string['settings-msg'] = 'Messaging';
+$string['settings-logout'] = 'Logout';
+$string['settings-login'] = 'Login';
+$string['settings-reset'] = 'Recover Password';
 
 $string['empty-institutions'] = 'There aren\'t Institutions';
 $string['empty-courses'] = 'You are not enrolled to any Course';
@@ -84,6 +92,8 @@ $string['logo_desc'] = 'URL for main logo image.';
 
 $string['bar_logo'] = 'Bar Logo';
 $string['bar_logo_desc'] = 'URL for logo image in the top bar. This URL must reference a file inside this theme pix folder without its extension (For example: if you have the file "/theme/cubic/pix/new_logo.png", the value for this field must be "new_logo").';
+
+$string['feedback_desc'] = 'URL for feedback page (by providing this URL a button for Feedback will be displayed on the right side of all Moodle pages).';
 
 $string['bar_color'] = 'Bar Color';
 $string['bar_color_desc'] = 'Background color for the top bar.';

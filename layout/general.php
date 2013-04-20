@@ -114,9 +114,11 @@
 	<!-- END OF FOOTER -->
 <?php } ?>
 
-<div class="feedback">
-	<a href="https://docs.google.com/spreadsheet/viewform?formkey=dGZFeG12eWJvelEzVlpDUzNIaUN3QXc6MQ#gid=0" target="_blanck"><?php echo get_string('feedback'); ?></a>
-</div>
+<?php if(!empty($PAGE->theme->settings->feedback)) { ?>
+	<div class="feedback">
+		<a href="<?php echo $PAGE->theme->settings->feedback; ?>" target="_blank"><?php echo get_string('feedback'); ?></a>
+	</div>
+<?php } ?>
 
 </div>
 <?php echo $OUTPUT->standard_end_of_body_html(); ?>
