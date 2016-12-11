@@ -1,5 +1,7 @@
 CUBIC - MOODLE THEME
 
+**IMPORTANT**: I am no longer maintaining this plugin. However if you require changes to it you can submit a Merge Request and I will gladly have a look into it.
+
 DESCRIPTION
 -----------
 
