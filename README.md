@@ -1,9 +1,8 @@
-CUBIC - MOODLE THEME
+# CUBIC - MOODLE THEME
 
 **IMPORTANT**: I am no longer maintaining this plugin. However if you require changes to it you can submit a Merge Request and I will gladly have a look into it.
 
-DESCRIPTION
------------
+## DESCRIPTION
 
 This theme is a base theme for Moodle, which introduces some new concepts and which takes advantage of some new technologies like HTML5 and CSS3.
 
@@ -18,16 +17,14 @@ Since the user bar contains a lot of useful information, the blocks are no longe
 Finally, this theme also provides a settings page where you can change several properties like logos, colors, system name, and others. On this page you can also remove the institutions and applications menus from the user bar in case you don't want to use them.
 
 
-RECOMMENDATIONS
----------------
+## RECOMMENDATIONS
 
 I changed the name of some Moodle core icons because they didn't make much sense to me, so if you want some icons to display correctly, I recommend that you make the changes listed bellow to your Moodle installation. However, these changes are not mandatory for this theme to work correctly.
 	- Replace all occurrences of "t/delete" by "t/close" in the file "lib/javascript-static.js";
 	- Replace all occurrences of "t/dockclose" by "t/close" in the file "blocks/dock.js";
 
 
-CONTENTS ORGANISATION
----------------------
+## CONTENTS ORGANISATION
 
 	FOLDERS:
 	- javascript: contains all javascript scripts;
